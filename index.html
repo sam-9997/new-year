@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Before We Met 🤍</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+          --bg: #faf7f4;
+          --text: #2c2c2c;
+          --muted: #7a7a7a;
+          --accent: #d8a7b1;
+          --card: #ffffff;
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+          background: var(--bg);
+          color: var(--text);
+          font-family: 'Inter', sans-serif;
+          line-height: 1.8;
+          overflow-x: hidden;
+        }
+
+        section {
+          min-height: 100vh;
+          padding: 72px 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .container {
+          max-width: 720px;
+          width: 100%;
+        }
+
+        h1, h2 {
+          font-family: 'Playfair Display', serif;
+          font-weight: 600;
+          margin-bottom: 18px;
+        }
+
+        h1 {
+          font-size: clamp(2.2rem, 6vw, 3rem);
+        }
+
+        h2 {
+          font-size: clamp(1.9rem, 5vw, 2.4rem);
+        }
+
+        p {
+          font-size: 1.05rem;
+          color: var(--muted);
+          margin-bottom: 16px;
+        }
+
+        .accent {
+          color: var(--accent);
+        }
+
+        /* Fade animation (mobile-first) */
+        .fade {
+          opacity: 0;
+          transform: translateY(32px);
+          transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .fade.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* Music button */
+        .music-btn {
+          position: fixed;
+          top: 18px;
+          right: 18px;
+          background: var(--card);
+          border-radius: 50%;
+          width: 46px;
+          height: 46px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 18px;
+          cursor: pointer;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+          z-index: 1000;
+          transition: transform 0.2s ease;
+        }
+
+        .music-btn:active {
+          transform: scale(0.92);
+        }
+
+        /* Countdown */
+        .countdown {
+          display: flex;
+          justify-content: center;
+          gap: 14px;
+          margin-top: 26px;
+          flex-wrap: wrap;
+        }
+
+        .time-box {
+          background: var(--card);
+          padding: 14px 16px;
+          border-radius: 14px;
+          min-width: 78px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .time-box span {
+          display: block;
+          font-size: 1.7rem;
+          font-weight: 600;
+          color: var(--accent);
+        }
+
+        .time-box small {
+          font-size: 0.7rem;
+          letter-spacing: 1px;
+          color: var(--muted);
+        }
+
+        /* Floating elements */
+        .float {
+          position: fixed;
+          bottom: -30px;
+          font-size: 16px;
+          opacity: 0.5;
+          animation: floatUp linear forwards;
+          pointer-events: none;
+        }
+
+        @keyframes floatUp {
+          0% { transform: translateY(0); opacity: 0; }
+          15% { opacity: 0.6; }
+          100% { transform: translateY(-120vh); opacity: 0; }
+        }
+
+        footer {
+          padding: 36px 16px;
+          text-align: center;
+          font-size: 0.85rem;
+          color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🎵 Background Music -->
+<!-- TODO: Replace with your own soft instrumental MP3 -->
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-btn" id="musicBtn">🤍</div>
+
+<!-- 🌙 Landing -->
+<section>
+    <div class="container fade">
+        <h1>To the woman I haven’t met yet… 🤍</h1>
+        <p>But already care for, deeply.</p>
+    </div>
+</section>
+
+<!-- 🌸 How it began -->
+<section>
+    <div class="container fade">
+        <h2>How It Began 🌸</h2>
+        <p>
+            We didn’t meet by chance.<br>
+            Our families met first.<br>
+            And then… we started talking.
+        </p>
+        <p>
+            <!-- TODO -->
+            Since <strong>October 2024</strong>, conversations slowly became comfort.
+        </p>
+    </div>
+</section>
+
+<!-- 💬 Conversations -->
+<section>
+    <div class="container fade">
+        <h2>Two Months, A Thousand Conversations 💬</h2>
+        <p>
+            Good mornings ☀️<br>
+            Late night talks 🌙<br>
+            Silences that felt safe 🤍
+        </p>
+        <p>
+            Somewhere between messages and calls,<br>
+            two strangers started feeling familiar.
+        </p>
+    </div>
+</section>
+
+<!-- 🤍 What I know -->
+<section>
+    <div class="container fade">
+        <h2>What I Know About You 🤍</h2>
+        <p>
+            I haven’t seen your smile yet,<br>
+            but I know you’re kind.
+        </p>
+        <p>
+            I haven’t heard your laughter in person,<br>
+            but I know you’re warm.
+        </p>
+        <p>
+            I haven’t held your hand,<br>
+            but I already trust it.
+        </p>
+
+        <!-- TODO: add 1–2 personal lines -->
+    </div>
+</section>
+
+<!-- 🌷 First meeting -->
+<section>
+    <div class="container fade">
+        <h2>Our First Meeting 🌷</h2>
+        <p>
+            Nervous smiles.<br>
+            Awkward hellos.<br>
+            A moment we’ll remember forever.
+        </p>
+        <p>January is coming closer.</p>
+
+        <div class="countdown">
+            <div class="time-box">
+                <span id="days">--</span>
+                <small>DAYS</small>
+            </div>
+            <div class="time-box">
+                <span id="hours">--</span>
+                <small>HOURS</small>
+            </div>
+            <div class="time-box">
+                <span id="minutes">--</span>
+                <small>MINUTES</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 💍 Promise -->
+<section>
+    <div class="container fade">
+        <h2>A Promise, Before We Meet 💍</h2>
+        <p>Before I see you, I promise to respect you.</p>
+        <p>Before I hold your hand, I promise to be patient.</p>
+        <p>Before forever begins, I promise to choose you.</p>
+        <h2 class="accent">See you soon 🤍</h2>
+    </div>
+</section>
+
+<footer>
+    Made with love ✨
+</footer>
+
+<script>
+    /* Fade-in observer */
+    const fades = document.querySelectorAll('.fade');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.25 });
+
+    fades.forEach(el => observer.observe(el));
+
+    /* Floating emojis (mobile optimized) */
+    const emojis = ["🤍", "🌸", "✨"];
+    setInterval(() => {
+      const el = document.createElement("div");
+      el.className = "float";
+      el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.animationDuration = (7 + Math.random() * 6) + "s";
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 13000);
+    }, 1400);
+
+    /* Music toggle */
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicBtn");
+    let playing = false;
+
+    btn.addEventListener("click", () => {
+      if (!playing) {
+        music.play();
+        btn.textContent = "🎵";
+      } else {
+        music.pause();
+        btn.textContent = "🤍";
+      }
+      playing = !playing;
+    });
+
+    /* Countdown */
+    // TODO: Set actual meeting date
+    const meetDate = new Date("2026-01-15T00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = meetDate - now;
+      if (diff <= 0) return;
+
+      document.getElementById("days").textContent =
+        Math.floor(diff / (1000 * 60 * 60 * 24));
+      document.getElementById("hours").textContent =
+        Math.floor((diff / (1000 * 60 * 60)) % 24);
+      document.getElementById("minutes").textContent =
+        Math.floor((diff / (1000 * 60)) % 60);
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+</script>
+
+</body>
+</html>
+
