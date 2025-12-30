@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Before We Met 🤍</title>
+    <title>For Khushi 🤍</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -70,7 +70,6 @@
           color: var(--accent);
         }
 
-        /* Fade animation (mobile-first) */
         .fade {
           opacity: 0;
           transform: translateY(32px);
@@ -82,7 +81,6 @@
           transform: translateY(0);
         }
 
-        /* Music button */
         .music-btn {
           position: fixed;
           top: 18px;
@@ -98,14 +96,8 @@
           cursor: pointer;
           box-shadow: 0 8px 20px rgba(0,0,0,0.08);
           z-index: 1000;
-          transition: transform 0.2s ease;
         }
 
-        .music-btn:active {
-          transform: scale(0.92);
-        }
-
-        /* Countdown */
         .countdown {
           display: flex;
           justify-content: center;
@@ -135,7 +127,6 @@
           color: var(--muted);
         }
 
-        /* Floating elements */
         .float {
           position: fixed;
           bottom: -30px;
@@ -162,19 +153,21 @@
 
 <body>
 
-<!-- 🎵 Background Music -->
-<!-- TODO: Replace with your own soft instrumental MP3 -->
 <audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<div class="music-btn" id="musicBtn">🤍</div>
+<div class="music-btn" id="musicBtn">🎵</div>
 
 <!-- 🌙 Landing -->
 <section>
     <div class="container fade">
-        <h1>To the woman I haven’t met yet… 🤍</h1>
-        <p>But already care for, deeply.</p>
+        <h1>To the most beautiful girl,</h1>
+        <h2>to the woman I haven’t met yet 🤍</h2>
+        <p>
+            And yet, somehow,<br>
+            you already feel close to my heart.
+        </p>
     </div>
 </section>
 
@@ -183,13 +176,18 @@
     <div class="container fade">
         <h2>How It Began 🌸</h2>
         <p>
-            We didn’t meet by chance.<br>
-            Our families met first.<br>
-            And then… we started talking.
+            We didn’t meet the usual way.<br>
+            Our families introduced us.<br>
+            Two strangers, just trying to talk.
         </p>
         <p>
-            <!-- TODO -->
-            Since <strong>October 2025</strong>, conversations slowly became comfort.
+            Somewhere between awkward starts<br>
+            and familiar conversations,<br>
+            something quietly began to grow.
+        </p>
+        <p>
+            Since <strong>October 2025</strong>,<br>
+            conversations slowly turned into comfort.
         </p>
     </div>
 </section>
@@ -197,44 +195,18 @@
 <!-- 💬 Conversations -->
 <section>
     <div class="container fade">
-        <h2>Two Months, A Thousand Conversations 💬</h2>
+        <h2>Three Months, A Thousand Conversations 💬</h2>
         <p>
-            Good mornings ☀️<br>
-            Late night talks 🌙<br>
-            Silences that felt safe 🤍
+            Good morning texts ☀️<br>
+            Random Instagram reels 😄<br>
+            Long phone calls that didn’t feel long 🌙
         </p>
         <p>
             Somewhere between messages and calls,<br>
-            two strangers started feeling familiar.
+            two strangers stopped feeling like strangers.
         </p>
     </div>
 </section>
-
-<!-- 🎆 New Year Section -->
-<section>
-    <div class="container fade">
-        <h2>Our First New Year 🎆</h2>
-
-        <p>
-            We haven’t met yet.<br>
-            We haven’t seen fireworks together.<br>
-            But we’re stepping into a new year — together.
-        </p>
-
-        <p>
-            Somewhere between messages and prayers,<br>
-            I found myself grateful for you.
-        </p>
-
-        <p class="accent">
-            This New Year,<br>
-            I don’t wish for perfection.<br>
-            I wish for patience, understanding,<br>
-            and a lifetime of choosing each other.
-        </p>
-    </div>
-</section>
-
 
 <!-- 🤍 What I know -->
 <section>
@@ -252,35 +224,37 @@
             I haven’t held your hand,<br>
             but I already trust it.
         </p>
-
-        <!-- TODO: add 1–2 personal lines -->
     </div>
 </section>
 
-<!-- 🌷 First meeting -->
+<!-- 🎆 New Year Letter -->
 <section>
     <div class="container fade">
-        <h2>Our First Meeting 🌷</h2>
-        <p>
-            Nervous smiles.<br>
-            Awkward hellos.<br>
-            A moment we’ll remember forever.
-        </p>
-        <p>January is coming closer.</p>
+        <div class="letter">
+            <h2>My New Year Letter to You 💌</h2>
 
-        <div class="countdown">
-            <div class="time-box">
-                <span id="days">--</span>
-                <small>DAYS</small>
-            </div>
-            <div class="time-box">
-                <span id="hours">--</span>
-                <small>HOURS</small>
-            </div>
-            <div class="time-box">
-                <span id="minutes">--</span>
-                <small>MINUTES</small>
-            </div>
+            <p>
+                Khushi,<br><br>
+                This is our first New Year connected by words,<br>
+                conversations, and quiet understanding.
+            </p>
+
+            <p>
+                We haven’t shared a moment in person yet,<br>
+                but somehow, you already feel familiar.
+            </p>
+
+            <p>
+                As this new year begins,<br>
+                I find myself feeling grateful —
+                for you, for this beginning,<br>
+                and for the future we’re slowly walking toward.
+            </p>
+
+            <p class="accent" style="font-weight:500">
+                Happy New Year, Khushi 🤍<br>
+                I can’t wait to finally meet you.
+            </p>
         </div>
     </div>
 </section>
@@ -302,17 +276,14 @@
 </footer>
 
 <script>
-    /* Fade-in observer */
     const fades = document.querySelectorAll('.fade');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('show');
       });
     }, { threshold: 0.25 });
-
     fades.forEach(el => observer.observe(el));
 
-    /* Floating emojis (mobile optimized) */
     const emojis = ["🤍", "✨", "🌸"];
     setInterval(() => {
       const el = document.createElement("div");
@@ -324,41 +295,14 @@
       setTimeout(() => el.remove(), 13000);
     }, 1400);
 
-    /* Music toggle */
     const music = document.getElementById("bgMusic");
     const btn = document.getElementById("musicBtn");
-    let playing = false;
+    music.play();
 
     btn.addEventListener("click", () => {
-      if (!playing) {
-        music.play();
-        btn.textContent = "🎵";
-      } else {
-        music.pause();
-        btn.textContent = "🤍";
-      }
-      playing = !playing;
+      music.pause();
+      btn.textContent = "🤍";
     });
-
-    /* Countdown */
-    // TODO: Set actual meeting date
-    const meetDate = new Date("2026-01-15T00:00:00").getTime();
-
-    function updateCountdown() {
-      const now = Date.now();
-      const diff = meetDate - now;
-      if (diff <= 0) return;
-
-      document.getElementById("days").textContent =
-        Math.floor(diff / (1000 * 60 * 60 * 24));
-      document.getElementById("hours").textContent =
-        Math.floor((diff / (1000 * 60 * 60)) % 24);
-      document.getElementById("minutes").textContent =
-        Math.floor((diff / (1000 * 60)) % 60);
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 60000);
 </script>
 
 </body>
