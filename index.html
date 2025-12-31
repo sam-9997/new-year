@@ -163,7 +163,7 @@
 <section>
     <div class="container fade">
         <h1>To the most beautiful girl,</h1>
-        <h2>to the woman I haven’t met yet 🤍</h2>
+        <h2>to someone I haven’t met yet 🤍</h2>
         <p>
             And yet, somehow,<br>
             you already feel close to my heart.
@@ -297,16 +297,19 @@
 
     const music = document.getElementById("bgMusic");
     const btn = document.getElementById("musicBtn");
-    music.play();
+    let playing = false;
 
     btn.addEventListener("click", () => {
-      music.pause();
-      btn.textContent = "🤍";
+      if (!playing) {
+        music.play();
+        btn.textContent = "🤍";
+      } else {
+        music.pause();
+        btn.textContent = "🎵";
+      }
+      playing = !playing;
     });
 </script>
 
 </body>
 </html>
-
-
-
